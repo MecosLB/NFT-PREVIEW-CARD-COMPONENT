@@ -35,7 +35,7 @@ svg {
 }
 
 p,
-h5 {
+h3 {
     font-size: 18px;
     color: var(--soft_blue);
 }
@@ -146,17 +146,17 @@ h5 {
     border-radius: 50%;
 }
 
-.card-footer>h5 {
+.card-footer>h3 {
     font-weight: 300;
     font-size: 16px;
 }
 
-.card-footer>h5 span {
+.card-footer>h3 span {
     color: white;
     letter-spacing: 0.5px;
 }
 
-.card-footer>h5 span:hover {
+.card-footer>h3 span:hover {
     cursor: pointer;
     color: var(--cyan);
 }
