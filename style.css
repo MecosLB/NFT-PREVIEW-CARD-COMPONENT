@@ -1,3 +1,15 @@
+:root {
+    --soft_blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /* main BG */
+    --dark_blue_main: hsl(217, 54%, 11%);
+    /* card BG */
+    --dark_blue_card: hsl(216, 50%, 16%);
+    /* line */
+    --dark_blue_line: hsl(215, 32%, 27%);
+    --rem_basic: 1.5rem;
+}
+
 *,
 *::before,
 *::after {
@@ -11,10 +23,143 @@
 
 body {
     min-height: 100vh;
+    padding: 20vh 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--dark_blue_main);
 }
 
 img,
 svg {
     display: block;
     max-width: 100%;
+}
+
+p,
+h5 {
+    font-size: 18px;
+    color: var(--soft_blue);
+}
+
+.card {
+    background-color: var(--dark_blue_card);
+    margin: 0 auto 5vh auto;
+    padding: var(--rem_basic);
+    max-width: 22rem;
+    border-radius: 1rem;
+}
+
+.card-header {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card-header .nft-view {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: hsl(178, 100%, 50%, 0.5);
+}
+
+.card-header .nft-view:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.nft-view>img {
+    position: revert;
+}
+
+.card-body {
+    padding: var(--rem_basic) 0;
+    margin-bottom: 1rem;
+    border-bottom: solid var(--dark_blue_line) 1px;
+}
+
+.card-body>h1 {
+    color: white;
+    width: fit-content;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.card-body>h1:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.card-body>p {
+    font-weight: 300;
+    line-height: var(--rem_basic);
+    margin-bottom: 1.6rem;
+}
+
+.nft-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nft-details .price {
+    position: relative;
+    color: var(--cyan);
+    font-size: 1rem;
+}
+
+.nft-details .price::before {
+    content: url('images/icon-ethereum.svg');
+    position: relative;
+    top: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+.nft-details .time {
+    position: relative;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.nft-details .time::before {
+    content: url('images/icon-clock.svg');
+    position: absolute;
+    left: -1.5rem;
+    top: 0.2rem;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-footer>img {
+    max-width: 2rem;
+    border: solid white 1px;
+    border-radius: 50%;
+}
+
+.card-footer>h5 {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.card-footer>h5 span {
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.card-footer>h5 span:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.attribution {
+    color: white;
 }
